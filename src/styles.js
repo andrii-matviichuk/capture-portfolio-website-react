@@ -8,6 +8,11 @@ export const About = styled(motion.div)`
   min-height: 90vh;
   padding: 5rem 10rem;
   color: #fff;
+  @media (max-width: 1300px) {
+    display: block;
+    padding: 2rem;
+    text-align: center;
+  }
 `;
 
 export const Description = styled.div`
@@ -16,6 +21,12 @@ export const Description = styled.div`
   z-index: 2;
   h2 {
     font-weight: lighter;
+  }
+  @media (max-width: 1300px) {
+    padding: 0;
+    button {
+      margin: 2rem 0 5rem;
+    }
   }
 `;
 
@@ -27,6 +38,13 @@ export const Image = styled.div`
     width: 100%;
     height: 80vh;
     object-fit: cover;
+  }
+
+  @media (max-width: 1300px) {
+    img {
+      max-width: 500px;
+      max-height: 500px;
+    }
   }
 `;
 

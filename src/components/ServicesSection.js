@@ -5,12 +5,11 @@ import teamwork from "../img/teamwork.svg";
 import home2 from "../img/home2.png";
 import styled from "styled-components";
 import { About, Description, Image } from "../styles";
-import { motion } from "framer-motion";
-import { scrollReveal, photoAnim } from "../animation";
+import { scrollReveal } from "../animation";
 import { useScroll } from "./UseScroll";
 
 function ServicesSection() {
-  const [element, controls] = useScroll({ threshold: 0.4 });
+  const [element, controls] = useScroll({ threshold: 0.3 });
   return (
     <Services
       variants={scrollReveal}
@@ -74,6 +73,9 @@ const Services = styled(About)`
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 
 const Card = styled.div`
