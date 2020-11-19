@@ -13,10 +13,16 @@ import {
   sliderContainer,
 } from "../animation";
 import { Hide } from "../styles";
+import { useScroll } from "../components/UseScroll";
+import { scrollReveal } from "../animation";
+import ScrollTop from "../components/ScrollTop";
 
 function OurWork() {
+  const [element, controls] = useScroll({ threshold: 0.4 });
+  const [element1, controls1] = useScroll({ threshold: 0.4 });
   return (
     <Work variants={PageAnimation} initial="hidden" animate="show" exit="exit">
+      <ScrollTop />
       <motion.div variants={sliderContainer}>
         <Frame1 variants={slider}></Frame1>
         <Frame2 variants={slider}></Frame2>
@@ -34,22 +40,32 @@ function OurWork() {
           </Hide>
         </Link>
       </Movie>
-      <Movie>
+      <Movie
+        ref={element}
+        animate={controls}
+        initial="hidden"
+        variants={scrollReveal}
+      >
         <Link to="/work/the-racer">
           <motion.h2 variants={fade}>The Racer</motion.h2>
         </Link>
-        <div className="line"></div>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-racer">
           <Hide>
             <motion.img variants={photoAnim} src={theracer} alt="theracer" />
           </Hide>
         </Link>
       </Movie>
-      <Movie>
-        <Link to="/work/the-racer">
+      <Movie
+        ref={element1}
+        animate={controls1}
+        initial="hidden"
+        variants={scrollReveal}
+      >
+        <Link to="/work/good-times">
           <motion.h2 variants={fade}>Good Times</motion.h2>
         </Link>
-        <div className="line"></div>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/good-times">
           <Hide>
             <motion.img variants={photoAnim} src={goodtimes} alt="goodtimes" />
@@ -75,7 +91,7 @@ const Work = styled(motion.div)`
   }
 `;
 
-const Movie = styled.div`
+const Movie = styled(motion.div)`
   padding-bottom: 10rem;
 
   .line {
