@@ -8,7 +8,8 @@ import { PageAnimation } from "../animation";
 function MovieDetail() {
   const history = useHistory();
   const url = history.location.pathname;
-  const [movies, setMovies] = useState(MovieState);
+  const [movies, setMovies] = useState();
+  setMovies(MovieState);
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
@@ -27,7 +28,7 @@ function MovieDetail() {
         >
           <HeadLine>
             <h1>{movie.title}</h1>
-            <img src={movie.mainImg} alt="movie image" />
+            <img src={movie.mainImg} alt="movie" />
           </HeadLine>
           <Awards>
             {movie.awards.map((award) => (
@@ -39,7 +40,7 @@ function MovieDetail() {
             ))}
           </Awards>
           <ImageDisplay>
-            <img src={movie.secondaryImg} alt="movie image" />
+            <img src={movie.secondaryImg} alt="movie" />
           </ImageDisplay>
         </Details>
       )}
