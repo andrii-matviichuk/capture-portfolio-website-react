@@ -45,12 +45,12 @@ const ContactStyle = styled(motion.div)`
   color: #fff;
   padding: 5rem 10rem;
   @media (max-width: 1300px) {
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     h2 {
-      font-size: 3rem;
+      font-size: 2rem;
     }
   }
 `;
@@ -69,8 +69,8 @@ const Circle = styled.div`
   height: 3rem;
   background: #fff;
   @media (max-width: 1300px) {
-    width: 2rem;
-    height: 2rem;
+    width: 1rem;
+    height: 1rem;
   }
 `;
 

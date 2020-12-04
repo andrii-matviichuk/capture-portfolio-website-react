@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
 
-  button {
+  button, .btn {
     font-weight: bold;
     cursor: pointer;
     font-size: 1.1rem;
@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
     color: #fff;
     transition: all 0.5s ease;
     font-family: 'Inter', sans-serif;
+    text-decoration: none;
     &:hover {
       background: #23d997;
       color: #fff;

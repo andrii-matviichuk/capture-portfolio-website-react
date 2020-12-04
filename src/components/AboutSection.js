@@ -26,7 +26,9 @@ function AboutSection() {
           dolorem, ipsa minus ducimus corporis reprehenderit non tempore est
           atque nihil.
         </motion.p>
-        <motion.button variants={fade}>Contact</motion.button>
+        <motion.a className="btn" variants={fade} href="/contact">
+          Contact
+        </motion.a>
       </Description>
       <Image className="img">
         <motion.img variants={photoAnim} src={home1} alt="guy with a camera" />

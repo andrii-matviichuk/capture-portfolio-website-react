@@ -8,8 +8,7 @@ import { PageAnimation } from "../animation";
 function MovieDetail() {
   const history = useHistory();
   const url = history.location.pathname;
-  const [movies, setMovies] = useState();
-  setMovies(MovieState);
+  const [movies] = useState(MovieState);
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
@@ -54,27 +53,29 @@ const Details = styled(motion.div)`
 
 const HeadLine = styled.div`
   min-height: 90vh;
-  padding-top: 20vh;
+  padding-top: 10vh;
   position: relative;
-
+  font-size: 2rem;
   h1 {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -10%);
+    font-weight: lighter;
+    margin-bottom: 2rem;
+    text-align: center;
   }
-
   img {
     width: 100%;
     height: 70vh;
     object-fit: cover;
+  }
+  @media (max-width: 1300px) {
+    text-align: center;
+    padding-top: 5vh;
   }
 `;
 
 const Awards = styled.div`
   min-height: 80vh;
   display: flex;
-  margin: 5rem 10rem;
+  margin: 2rem 5rem;
   align-items: center;
   justify-content: space-around;
   @media (max-width: 1300px) {
@@ -84,7 +85,7 @@ const Awards = styled.div`
 `;
 
 const AwardStyle = styled.div`
-  padding: 5rem;
+  padding: 2rem 5rem;
 
   h3 {
     font-size: 2rem;
@@ -99,6 +100,10 @@ const AwardStyle = styled.div`
 
   p {
     padding: 2rem 0;
+  }
+
+  @media (max-width: 1300px) {
+    padding: 1rem;
   }
 `;
 
