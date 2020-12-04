@@ -9,7 +9,7 @@ import { scrollReveal } from "../animation";
 import { useScroll } from "./UseScroll";
 
 function ServicesSection() {
-  const [element, controls] = useScroll({ threshold: 0.3 });
+  const [element, controls] = useScroll({ threshold: 0.2 });
   return (
     <Services
       variants={scrollReveal}

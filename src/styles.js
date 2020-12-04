@@ -12,6 +12,9 @@ export const About = styled(motion.div)`
     display: block;
     padding: 2rem;
     text-align: center;
+    .mt2 {
+      margin-top: 2rem;
+    }
   }
 `;
 

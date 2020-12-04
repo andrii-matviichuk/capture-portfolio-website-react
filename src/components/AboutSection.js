@@ -29,6 +29,7 @@ function AboutSection() {
         <motion.a className="btn" variants={fade} href="/contact">
           Contact
         </motion.a>
+        <div className="mt2"></div>
       </Description>
       <Image className="img">
         <motion.img variants={photoAnim} src={home1} alt="guy with a camera" />
