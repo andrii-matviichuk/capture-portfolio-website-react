@@ -1,5 +1,6 @@
 # Capture portfolio website
 
+Sample portfolio website for Capture Agency.
 This project was build with React, using Styled Components and Framer Motion.
 
 ## Available Scripts
